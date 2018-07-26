@@ -40,6 +40,10 @@ app.get('/', function (req, res) {
   res.render('index', { title: 'Hey', message: 'Hello there!' })
 })
 
+app.get('/testy', function (req, res) {
+  res.render('index', { title: 'Hey', message: 'Hello there!' })
+})
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
