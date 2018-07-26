@@ -1,14 +1,17 @@
 extends layout
 
 block content
-  nav(class="navbar navbar-expand-lg navbar-light bg-light")
+  nav(class="navbar navbar-expand-lg bg-dark")
+    
     a(class="navbar-brand") RedditClone
+    
+    
     button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
       span(class="navbar-toggler-icon")
 
     form(class="form-inline my-2 my-lg-0")
       input(class="form-control mr-lg-2" type="search" placeholder="Search" aria-label="Search")
-      button(class="btn btn-outline-success my-2 my-sm-6" type="submit") Submit
+      button(class="btn btn-outline-success my-2 my-sm-6 submit" type="submit") Submit
     
     div(class="collapse navbar-collapse" id="navbarSupportedContent")
       ul(class="navbar-nav mr-auto")
@@ -27,6 +30,9 @@ block content
         li(class="nav-item")
           a(class="nav-link disabled" href="#") Disabled
 
+    button(class="btn btn-outline-success my-2 mx-1 my-sm-6 login" type="submit") Login
+
+    button(class="btn btn-outline-success my-2 mx-1 my-sm-6 signup" type="submit") Sign Up
       
 
 
