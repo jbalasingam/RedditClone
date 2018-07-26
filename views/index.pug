@@ -1,5 +1,32 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  nav(class="navbar navbar-expand-lg navbar-light bg-light")
+    a(class="navbar-brand") RedditClone
+    button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+      span(class="navbar-toggler-icon")
+
+    form(class="form-inline my-2 my-lg-0")
+      input(class="form-control mr-lg-2" type="search" placeholder="Search" aria-label="Search")
+      button(class="btn btn-outline-success my-2 my-sm-6" type="submit") Submit
+    
+    div(class="collapse navbar-collapse" id="navbarSupportedContent")
+      ul(class="navbar-nav mr-auto")
+        li(class="nav-item active")
+          a(class="nav-link" href="#") Home
+          span(class="sr-only") (current)
+        li(class="nav-item")
+          a(class="nav-link" href="#") Link
+        li(class="nav-item dropdown")
+          a(class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Dropdown
+          div(class="dropdown-menu" aria-labelledby="navbarDropdown")
+            a(class="dropdown-item" href="#") Action
+            a(class="dropdown-item" href="#") Another Action
+            div(lass="dropdown-divider")
+            a(class="dropdown-item" href="#") Something Else Here
+        li(class="nav-item")
+          a(class="nav-link disabled" href="#") Disabled
+
+      
+
+
