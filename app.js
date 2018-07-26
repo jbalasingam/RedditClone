@@ -30,13 +30,17 @@ app.use(express.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/u/', usersRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
 });
+
 
 app.get('/', function (req, res) {
   res.render('index', {
@@ -51,6 +55,8 @@ app.get('/testy', function (req, res) {
     message: 'Hello there!'
   })
 })
+
+
 
 // error handler
 app.use(function (err, req, res, next) {
