@@ -1,16 +1,16 @@
 extends layout
 
 block content
-  nav(class="navbar navbar-expand-lg bg-dark")
+  nav(class="navbar navbar-expand-lg")
     
-    a(class="navbar-brand") RedditClone
+    a(class="navbar-brand") Cruddit
     
     
     button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
       span(class="navbar-toggler-icon")
 
-    form(class="form-inline my-2 my-lg-0")
-      input(class="form-control mr-lg-2" type="search" placeholder="Search" aria-label="Search")
+    form(class="form-inline my-2 my-lg-0 w-100")
+      input(class="form-control mr-xl-2 mx-1 w-75" type="search" placeholder="Search" aria-label="Search")
       button(class="btn btn-outline-success my-2 my-sm-6 submit" type="submit") Submit
     
     div(class="collapse navbar-collapse" id="navbarSupportedContent")
@@ -31,8 +31,16 @@ block content
           a(class="nav-link disabled" href="#") Disabled
 
     button(class="btn btn-outline-success my-2 mx-1 my-sm-6 login" type="submit") Login
-
     button(class="btn btn-outline-success my-2 mx-1 my-sm-6 signup" type="submit") Sign Up
-      
 
+  br
+  br
+  div(class="row")
+    div(class="container col-md-6")
+      div(class="panel panel-default user-insert")
+        div(class="panel-heading user-heading") Panel Heading
+        div(class="container col-md-5")
+          div(class="panel-body user-comment") We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional website or whether you are looking for a design refresh we are confident you will be pleased with the results.
+          div(class="container col-md-1") Hello
 
+  
