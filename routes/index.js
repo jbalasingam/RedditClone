@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var subreddit = "subreddits"
+
+//placeholder for subs
+var subreddit = "testyy"
 
 
 /* GET home page. */
@@ -9,11 +11,17 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/subreddits', function(req, res, next) {
-  res.render('index', { title: `${subreddit}` });
+  res.render('index', { title: `AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH` });
 });
 
 router.get('/error', function(req, res, next) {
   res.render('error', { title: `error page` });
+});
+
+router.get('/r/:subreddit', function(req, res, next) {
+  res.render('index', { title:  req.params.subreddit });
+
+  
 });
 
 
