@@ -41,12 +41,6 @@ app.use(function (req, res, next) {
 });
 
 
-
-
-
-
-
-
 db.sequelize.sync({
   force: true
 }).then(function () {
