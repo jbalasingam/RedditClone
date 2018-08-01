@@ -30,20 +30,9 @@ block content
         li(class="nav-item")
           a(class="nav-link disabled" href="#") Disabled
 
+
     button(class="btn btn-outline-success my-2 mx-1 my-sm-6 login" type="submit" style={color:'white',background:"blue"}) FB Sign In
     button(class="btn btn-outline-success my-2 mx-1 my-sm-6 signup" type="submit") Sign Up
-
-    div#fb-root
-    script
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {return;}
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=101562769948573";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-    div.fb-like(data-href="http://foodjing.com/" data-send="true" data-width="450" data-show-faces="true")
 
   
   div(class="container" style={background:'rgb(178,34,34)', margin:'10px'})
@@ -55,5 +44,22 @@ block content
           div(class = "user-comment row col-md-12")
             div(class="part1 col-md-9") We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional website or whether you are looking for a design refresh we are confident you will be pleased with the results
             div(class="part2 col-md-3") We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs.
+
+    fb:login-button(scope="public_profile,email" onlogin="checkLoginState();")
+    div(id="status")
+
+  br
+  br
+  div(class="container")
+    button(class="testyButt") testybutt
+    div(class="row panel panel-default user-insert col-md-12")
+      div(class = "votes col-md-1") Votes
+      div(class = "post col-md-11")
+        div(class="panel-heading user-heading col-md-12")  We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional website or whether you are looking for a design refresh we are confident you will be pleased with the results
+
+        div(class = "user-comment row col-md-12")
+          div(class="part1 col-md-9") We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional website or whether you are looking for a design refresh we are confident you will be pleased with the results
+          
+          div(class="part2 col-md-3") We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs.
       
 
