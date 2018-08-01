@@ -1,6 +1,9 @@
 var createError = require('http-errors');
+var http = require('http');
+var https = require('https');
 var express = require('express');
 var path = require('path');
+var fs = require('fs');
 //var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
@@ -12,6 +15,12 @@ var PORT = process.env.PORT || 8080;
 
 
 var app = express();
+
+// var options = {
+//   key: fs.readFileSync('certificates/private.key'),
+//   cert: fs.readFileSync('certificates/certificate.crt'),
+//   ca: fs.readFileSync('certificates/ca_bundle.crt')
+// };
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -44,6 +53,8 @@ app.use(function (req, res, next) {
 db.sequelize.sync({
   force: true
 }).then(function () {
+  http.createServer(app).listen(3000)
+  // https.createServer(options, app).listen(PORT)
   app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
   });
