@@ -8,7 +8,9 @@
   "dependencies": {
     "debug": "~2.6.9",
     "express": "~4.16.0",
+    "http": "0.0.0",
     "http-errors": "~1.6.2",
+    "https": "^1.0.0",
     "mysql2": "^1.5.3",
     "pug": "^2.0.0-beta11",
     "pug-loader": "^2.4.0",
