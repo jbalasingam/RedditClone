@@ -3,14 +3,16 @@ extends layout
 block content
   nav(class="navbar navbar-expand-lg" style={background: 'rgb(178,34,34)'})
     
-    a(class="navbar-brand") Cruddit
     
+    .image-block
+      img.className#IdName(src="https://vignette.wikia.nocookie.net/dragonball/images/f/fc/Reddit-alien.png/revision/latest?cb=20130627205115" alt="Image Title" style={height:'60px',width:'35px'})
+
     
     button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
       span(class="navbar-toggler-icon")
 
     form(class="form-inline my-2 my-lg-0 w-100")
-      input(class="form-control mr-xl-2 mx-1 w-75" type="search" placeholder="Search" aria-label="Search")
+      input(class="form-control mr-xl-2 mx-1 w-75" type="search" placeholder="Cruddit Search" aria-label="Search")
       button(class="btn btn-outline-success my-2 my-sm-6 submit" type="submit") Submit
     
     div(class="collapse navbar-collapse" id="navbarSupportedContent")
