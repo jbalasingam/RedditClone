@@ -6,8 +6,8 @@ var fs = require('fs');
 //var logger = require('morgan');
 
 var options = {
-  key: fs.readFileSync('server.key'),
-  cert: fs.readFileSync('server.crt'),
+  key: fs.readFileSync('./keys/server.key'),
+  cert: fs.readFileSync('./keys/server.crt'),
   requestCert: false,
   rejectUnauthorized: false
 };
