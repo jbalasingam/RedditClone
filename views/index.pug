@@ -1,8 +1,8 @@
-extends layout
+extends layout.pug
 
 block content
+
   nav(class="navbar navbar-expand-lg" style={background: 'rgb(178,34,34)'})
-    
     
     .image-block
       img.className#IdName(src="https://vignette.wikia.nocookie.net/dragonball/images/f/fc/Reddit-alien.png/revision/latest?cb=20130627205115" alt="Image Title" style={height:'60px',width:'35px'})
@@ -35,31 +35,29 @@ block content
 
     fb:login-button(scope="public_profile,email" onlogin="checkLoginState();")
     div(id="status")
+
+  br
+  br
   
   div(class="container" style={background:'rgb(178,34,34)', margin:'10px'})
       div(class="row panel panel-default user-insert col-md-12")
-        div(class = "votes col-md-1") Votes
-        div(class = "post col-md-11")
+          div(class = "votes col-md-1") Votes
+          div(class = "post col-md-11")
           div(class="panel-heading user-heading col-md-12")  We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional website or whether you are looking for a design refresh we are confident you will be pleased with the results
 
           div(class = "user-comment row col-md-12")
-            div(class="part1 col-md-9") We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional website or whether you are looking for a design refresh we are confident you will be pleased with the results
-            div(class="part2 col-md-3") We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs.
+              div(class="part1 col-md-9") We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional website or whether you are looking for a design refresh we are confident you will be pleased with the results
+              div(class="part2 col-md-3") We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs.
 
-    
-
-  br
-  br
-  div(class="container")
-    button(class="testyButt") testybutt
+  div(class="container" style={background:'rgb(178,34,34)', margin:'10px'})
     div(class="row panel panel-default user-insert col-md-12")
-      div(class = "votes col-md-1") Votes
-      div(class = "post col-md-11")
-        div(class="panel-heading user-heading col-md-12")  We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional website or whether you are looking for a design refresh we are confident you will be pleased with the results
+      div(class="row midcol unvoted col-md-1" style={margin:'10px'})
+        div(class="score dislikes" title="1651") 1651
+        div(class="score unvoted" title="1652") 1652
+        div(class="score likes" title="1653") 1653
+      div(class=" row image thumbnail col-md-3")
+        img(src="//b.thumbs.redditmedia.com/v0GHt_qPwiu8NaB5ntK4m4JhQDDawDBcWsesik3D45c.jpg" alt="Image Title" style={height:'55',width:'70',margin:'10px'})
+      div(class="comment_div col-md-7" style={margin:'10px'})
+        a(class="comment") Hello please insert your comment here!
 
-        div(class = "user-comment row col-md-12")
-          div(class="part1 col-md-9") We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional website or whether you are looking for a design refresh we are confident you will be pleased with the results
-          
-          div(class="part2 col-md-3") We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs.
-      
-
+        
