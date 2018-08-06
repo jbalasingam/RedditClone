@@ -1,0 +1,23 @@
+extends index.pug
+
+block append content
+  
+  div(class="container colorTheme" style={margin:'10px'})
+    div(class="row panel panel-default user-insert col-md-12")
+
+      div(class="row midcol voteButtons col-md-1")
+        div(class="row midcol vote circle")
+          div(class="increment up")
+          div(class="increment down")
+          div(class="count") 8
+          
+      div(class="row midcol unvoted col-md-1" style={margin:'10px'})
+        div(class="score dislikes" title="1651") 1651
+        div(class="score unvoted" title="1652") 1652
+        div(class="score likes" title="1653") 1653
+
+      div(class=" row image thumbnail col-md-3")
+        img(src="//b.thumbs.redditmedia.com/v0GHt_qPwiu8NaB5ntK4m4JhQDDawDBcWsesik3D45c.jpg" alt="Image Title" style={height:'55',width:'70',margin:'10px'})
+
+      div(class="comment_div col-md-7" style={margin:'10px'})
+        a(class="comment") Hello please
