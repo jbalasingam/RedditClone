@@ -1,14 +1,77 @@
 Script.
+    var clickedUp = false;
+    var clickedDown = false;
+
     $(function(){
         $(".increment").click(function(){
             var count = parseInt($("~ .count", this).text());
 
-            if($(this).hasClass("up")) {
-                var count = count + 1;
-                $("~ .count", this).text(count);
+                    if($(this).hasClass("up")) {
+
+                        if(clickedUp == false && clickedDown == false){
+                        clickedUp = true;
+                        count = count + 1;
+                        $("~ .count", this).text(count);
+                        $(this).css("background-color","green");
+                        $(".down").css("background-color","grey");
+                        console.log(clickedUp);
+                        console.log(clickedDown);
+                        
+                    } else if(clickedUp == true && clickedDown == false) {
+
+                        clickedUp = false;
+                        count = count - 1;
+                        $(this).css("background-color","grey");
+                        $("~ .count", this).text(count);
+                        console.log(clickedUp);
+                        console.log(clickedDown);
+
+                    }else if(clickedUp == false && clickedDown == true) {
+
+                        clickedUp = true;
+                        clickedDown = false;
+                        count = count + 2;
+                        $(".down").css("background-color","grey");
+                        $(this).css("background-color","green");
+                        $("~ .count", this).text(count);
+                        console.log(clickedUp);
+                        console.log(clickedDown);
+
+                    }
+
             } else {
-            var count = count - 1;
-                $("~ .count", this).text(count); 
+
+                     if(clickedUp == false && clickedDown == false) {
+
+                        clickedDown = true;
+                        count = count - 1;
+                        $("~ .count", this).text(count);
+                        $(this).css("background-color","red");
+                        $(".up").css("background-color","grey");
+                        console.log(clickedUp);
+                        console.log(clickedDown);
+                    
+                    } else if(clickedUp == false && clickedDown == true){
+
+                        clickedDown = false;
+                        count = count + 1;
+                        $(this).css("background-color","grey");
+                        $("~ .count", this).text(count);
+                        console.log(clickedUp);
+                        console.log(clickedDown);
+
+                    }else if(clickedUp == true && clickedDown == false){
+
+                        clickedUp = false;
+                        clickedDown = true;
+                        count = count -2;
+                        $(".up").css("background-color","grey");
+                        $(this).css("background-color","red");
+                        $("~ .count", this).text(count);
+                        console.log(clickedUp);
+                        console.log(clickedDown);
+
+                    }
             }
 
             $(this).parent().addClass("bump");
