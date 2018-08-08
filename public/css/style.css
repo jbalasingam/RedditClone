@@ -124,6 +124,7 @@
 .post-input {
     background-color: rgb(161, 181, 248);
     font-size: 14px;
+    overflow: visible;
 }
 
 .post-title {

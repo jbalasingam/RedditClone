@@ -4,16 +4,15 @@ extends index.pug
 block append content
 
 
-    div(class=" row container col-md-12")
+    div(class="container row col-md-12")
         div(class="col-md-9")
             div(class="input-group col-md-9")
                 input(type="text" class="form-control col-md-12 post-title" placeholder="Enter your post's title." aria-label="Recipient's username" aria-describedby="basic-addon2")
-            
-            div(class="input-group col-md-9")
-                input(type="text" class="form-control col-md-12 post-input" placeholder=" Enter your post. Freedom = the condition or right of being able or allowed to do, say, think, etc. whatever you want to, without being controlled or limited." aria-label="Recipient's username" aria-describedby="basic-addon2" style={height:'300px'})
-                
-                div(class="input-group-append")
-                    button(class="btn btn-outline-secondary btn-post" type="button") Post
+
+            div(class="form-group col-md-9")
+                textarea(class="form-control post-input" placeholder="Enter your post. Freedom = the condition or right of being able or allowed to do, say, think, etc. whatever you want to, without being controlled or limited." id="exampleTextarea" rows="3" style={height:'300px'})
+            div(class="form-group")
+                button(class="btn btn-outline-secondary btn-post" type="button" style={'margin-left':'15px'}) Post
 
         div(class="container col-md-3 advertisements" style={height:'10000px'}) 
                     
