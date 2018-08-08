@@ -120,7 +120,17 @@
 }
 
 .btn-post {
-    background-color: blue;
+    background-color: rgb(42, 42, 42);
     color: white;
     text-shadow: 2px;
+    font-size: 14px;
+}
+
+.post-input {
+    background-color: rgb(161, 181, 248);
+    font-size: 14px;
+}
+
+.post-title {
+    font-size: 14px;
 }
