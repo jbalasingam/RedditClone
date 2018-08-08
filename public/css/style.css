@@ -118,3 +118,9 @@
 .colorTheme {
     background-color: rgb(161, 181, 248)
 }
+
+.btn-post {
+    background-color: blue;
+    color: white;
+    text-shadow: 2px;
+}
