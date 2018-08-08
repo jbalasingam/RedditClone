@@ -6,72 +6,76 @@ Script.
         $(".increment").click(function(){
             var count = parseInt($("~ .count", this).text());
 
-                    if($(this).hasClass("up")) {
-
-                        if(clickedUp == false && clickedDown == false){
-                        clickedUp = true;
-                        count = count + 1;
-                        $("~ .count", this).text(count);
-                        $(this).css("background-color","green");
-                        $(".down").css("background-color","grey");
-                        console.log(clickedUp);
-                        console.log(clickedDown);
+            if($(this).hasClass("up")) {
                         
-                    } else if(clickedUp == true && clickedDown == false) {
+                        var id = $(this).attr('id')
+                        
+                        if($(".up"+id).hasClass("false") && $(".down"+id).hasClass("false")){
 
-                        clickedUp = false;
-                        count = count - 1;
-                        $(this).css("background-color","grey");
-                        $("~ .count", this).text(count);
-                        console.log(clickedUp);
-                        console.log(clickedDown);
+                            
+                            count = count + 1;
+                            $(".count"+id).text(count);
+                            $(this).css("background-color","green");
+                            $(".down").css("background-color","grey");
+                            $(".up"+id).removeClass("false")
+                            $(".up"+id).addClass("true")
 
-                    }else if(clickedUp == false && clickedDown == true) {
+                        } else if($(".up"+id).hasClass("true") && $(".down"+id).hasClass("false")){
 
-                        clickedUp = true;
-                        clickedDown = false;
-                        count = count + 2;
-                        $(".down").css("background-color","grey");
-                        $(this).css("background-color","green");
-                        $("~ .count", this).text(count);
-                        console.log(clickedUp);
-                        console.log(clickedDown);
+                            count = count - 1;
+                            $(".count"+id).text(count);
+                            $(this).css("background-color","grey");
+                            $(".up"+id).removeClass("true")
+                            $(".up"+id).addClass("false")
 
-                    }
+                        } else if($(".up"+id).hasClass("false") && $(".down"+id).hasClass("true")){
 
-            } else {
+                            count = count + 2;
+                            $(".count"+id).text(count);
+                            $(this).css("background-color","green");
+                            $(".down"+id).css("background-color","grey");
+                            $(".down"+id).removeClass("true")
+                            $(".down"+id).addClass("false")
+                            $(".up"+id).removeClass("false")
+                            $(".up"+id).addClass("true")
 
-                     if(clickedUp == false && clickedDown == false) {
+                        }
 
-                        clickedDown = true;
-                        count = count - 1;
-                        $("~ .count", this).text(count);
-                        $(this).css("background-color","red");
-                        $(".up").css("background-color","grey");
-                        console.log(clickedUp);
-                        console.log(clickedDown);
-                    
-                    } else if(clickedUp == false && clickedDown == true){
 
-                        clickedDown = false;
-                        count = count + 1;
-                        $(this).css("background-color","grey");
-                        $("~ .count", this).text(count);
-                        console.log(clickedUp);
-                        console.log(clickedDown);
+            } else if($(this).hasClass("down")){
 
-                    }else if(clickedUp == true && clickedDown == false){
+                    var id = $(this).attr('id')
+                        if($(".down"+id).hasClass("false") && $(".up"+id).hasClass("false")){
+                            
+                            console.log("hello");
+                            count = count - 1;
+                            $(".count"+id).text(count);
+                            $(this).css("background-color","red");
+                            $(".up").css("background-color","grey");
+                            $(".down"+id).removeClass("false")
+                            $(".down"+id).addClass("true")
 
-                        clickedUp = false;
-                        clickedDown = true;
-                        count = count -2;
-                        $(".up").css("background-color","grey");
-                        $(this).css("background-color","red");
-                        $("~ .count", this).text(count);
-                        console.log(clickedUp);
-                        console.log(clickedDown);
+                        } else if($(".up"+id).hasClass("false") && $(".down"+id).hasClass("true")){
 
-                    }
+                            count = count + 1;
+                            $(".count"+id).text(count);
+                            $(this).css("background-color","grey");
+                            $(".up").css("background-color","grey");
+                            $(".down"+id).removeClass("true")
+                            $(".down"+id).addClass("false")
+
+                        } else if($(".up"+id).hasClass("true") && $(".down"+id).hasClass("false")){
+
+                            count = count - 2;
+                            $(".count"+id).text(count);
+                            $(this).css("background-color","red");
+                            $(".up"+id).css("background-color","grey");
+                            $(".down"+id).removeClass("false")
+                            $(".down"+id).addClass("true")
+                            $(".up"+id).removeClass("true")
+                            $(".up"+id).addClass("false")
+
+                        }
             }
 
             $(this).parent().addClass("bump");
