@@ -4,6 +4,7 @@ Script.
 
     $(function(){
         $(".increment").click(function(){
+
             var count = parseInt($("~ .count", this).text());
 
             if($(this).hasClass("up")) {
@@ -12,32 +13,34 @@ Script.
                         
                         if($(".up"+id).hasClass("false") && $(".down"+id).hasClass("false")){
 
-                            
                             count = count + 1;
                             $(".count"+id).text(count);
-                            $(this).css("background-color","green");
-                            $(".down").css("background-color","grey");
-                            $(".up"+id).removeClass("false")
-                            $(".up"+id).addClass("true")
+                            $(".up"+id).css("background-color","green");
+                            $(".down"+id).css("background-color","grey");
+                            $(".up"+id).removeClass("false");
+                            $(".up"+id).addClass("true");
+                            
 
                         } else if($(".up"+id).hasClass("true") && $(".down"+id).hasClass("false")){
 
                             count = count - 1;
                             $(".count"+id).text(count);
-                            $(this).css("background-color","grey");
+                            $(".up"+id).css("background-color","grey");
                             $(".up"+id).removeClass("true")
                             $(".up"+id).addClass("false")
+                            
 
                         } else if($(".up"+id).hasClass("false") && $(".down"+id).hasClass("true")){
 
                             count = count + 2;
                             $(".count"+id).text(count);
-                            $(this).css("background-color","green");
+                            $(".up"+id).css("background-color","green");
                             $(".down"+id).css("background-color","grey");
                             $(".down"+id).removeClass("true")
                             $(".down"+id).addClass("false")
                             $(".up"+id).removeClass("false")
                             $(".up"+id).addClass("true")
+                            
 
                         }
 
@@ -50,38 +53,34 @@ Script.
                             console.log("hello");
                             count = count - 1;
                             $(".count"+id).text(count);
-                            $(this).css("background-color","red");
-                            $(".up").css("background-color","grey");
+                            $(".down"+id).css("background-color","red");
+                            $(".up"+id).css("background-color","grey");
                             $(".down"+id).removeClass("false")
                             $(".down"+id).addClass("true")
+                           
 
                         } else if($(".up"+id).hasClass("false") && $(".down"+id).hasClass("true")){
 
                             count = count + 1;
                             $(".count"+id).text(count);
-                            $(this).css("background-color","grey");
-                            $(".up").css("background-color","grey");
+                            $(".down"+id).css("background-color","grey");
+                            $(".up"+id).css("background-color","grey");
                             $(".down"+id).removeClass("true")
                             $(".down"+id).addClass("false")
+                            
 
                         } else if($(".up"+id).hasClass("true") && $(".down"+id).hasClass("false")){
 
                             count = count - 2;
                             $(".count"+id).text(count);
-                            $(this).css("background-color","red");
+                            $(".down"+id).css("background-color","red");
                             $(".up"+id).css("background-color","grey");
                             $(".down"+id).removeClass("false")
                             $(".down"+id).addClass("true")
                             $(".up"+id).removeClass("true")
                             $(".up"+id).addClass("false")
-
+                           
                         }
             }
-
-            $(this).parent().addClass("bump");
-            
-            setTimeout(function(){
-                $(this).parent().removeClass("bump"); 
-            }, 400);
         });
     });
