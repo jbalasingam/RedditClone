@@ -59,14 +59,14 @@
 }
 
 .increment.up {
-    background:grey;
+    background: grey;
     height: 50%;
     margin-bottom: 0.25rem;
     position: relative;
 }
 
 .increment.down {
-    background:grey;
+    background: grey;
     height: 50%;
     position: relative;
     top: +15%;
@@ -85,11 +85,11 @@
 }
 
 .count.upvoted {
-    color:grey;
+    color: grey;
 }
 
 .count.downvoted {
-    color:grey;
+    color: grey;
 }
 
 .bump {
@@ -116,5 +116,5 @@
 }
 
 .colorTheme {
-    background-color: rgb(189, 121, 121)
+    background-color: rgb(161, 181, 248)
 }
