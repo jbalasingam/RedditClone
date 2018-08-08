@@ -1,23 +1,44 @@
 extends index.pug
 
 block append content
-  
-  div(class="container colorTheme" style={margin:'10px'})
-    div(class="row panel panel-default user-insert col-md-12")
+  div(class="container row col-md-12")
+    div(class="col-md-9")
+      div(class="container colorTheme" )
+        div(class="row panel panel-default user-insert col-md-9")
 
-      div(class="row midcol voteButtons col-md-1")
-        div(class="row midcol vote circle")
-          div(class="increment up")
-          div(class="increment down")
-          div(class="count") 8
-          
-      div(class="row midcol unvoted col-md-1" style={margin:'10px'})
-        div(class="score dislikes" title="1651") 1651
-        div(class="score unvoted" title="1652") 1652
-        div(class="score likes" title="1653") 1653
+          div(class="row midcol voteButtons col-md-1")
+            div(class="row midcol vote circle")
+              div(class="increment up")
+              div(class="increment down")
+              div(class="count") 8
+              
+          div(class="row midcol unvoted col-md-1" style={margin:'10px'})
+            div(class="score dislikes" title="1651") 1651
+            div(class="score unvoted" title="1652") 1652
+            div(class="score likes" title="1653") 1653
 
-      div(class=" row image thumbnail col-md-3")
-        img(src="//b.thumbs.redditmedia.com/v0GHt_qPwiu8NaB5ntK4m4JhQDDawDBcWsesik3D45c.jpg" alt="Image Title" style={height:'55',width:'70',margin:'10px'})
+          div(class=" row image thumbnail col-md-3")
+            img(src="//b.thumbs.redditmedia.com/v0GHt_qPwiu8NaB5ntK4m4JhQDDawDBcWsesik3D45c.jpg" alt="Image Title" style={height:'55',width:'70',margin:'10px'})
 
-      div(class="comment_div col-md-7" style={margin:'10px'})
-        a(class="comment") Hello please
+          div(class="comment_div col-md-7" style={margin:'10px'})
+            a(class="comment") Hello please
+
+    div(class="container col-md-3 advertisements" style={height:'10000px'}) 
+
+      div(class="adBlock" style={height:'350px'})
+        div(class="adContent" style={position:'fixed'}) Advertisements
+        br
+        | 
+        .image-block
+        img.className#IdName(src="https://static.redditgifts.com/images/uploaded/exchange-promo-ad-300-x-250/2018/7/17/2018-batch-5-living-spaces-1531863444-802862842014.png" class="img1 ads" alt="Image Title" style={position:'relative', height:'300px',width:'300px'})
+        
+        | 
+      div(class="adBlock" style={height:'350px'})
+        .image-block
+        img.className#IdName(src="https://blog.bannersnack.com/wp-content/uploads/2016/05/Amazon-Prime.png" class="img1 ads" alt="Image Title" style={position:'relative', height:'300px',width:'300px'})
+
+        | 
+      div(class="adBlock" style={height:'350px'})
+        .image-block
+        img.className#IdName(src="https://blog.bannersnack.com/wp-content/uploads/2016/05/Facebook.png" class="img1 ads" alt="Image Title" style={position:'relative', height:'300px',width:'300px'})
+
