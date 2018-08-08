@@ -18,6 +18,12 @@ router.get('/subreddits', function (req, res, next) {
   });
 });
 
+router.get('/post', function (req, res, next) {
+  res.render('post', {
+    title: `Post It!`
+  });
+});
+
 router.get('/error', function (req, res, next) {
   res.render('error', {
     title: `error page`
